@@ -1,0 +1,44 @@
+{
+  "testRunner": "jest",
+  "runnerConfig": "e2e/config.json",
+  "apps": {
+    "ios": {
+      "type": "ios.app",
+      "binaryPath": "bin/expo-detox.app"
+    },
+    "android": {
+      "type": "android.apk",
+      "binaryPath": "bin/expo-detox.apk"
+    }
+  },
+  "devices": {
+    "simulator": {
+      "type": "ios.simulator",
+      "device": {
+        "type": "iPhone 12 Pro"
+      }
+    },
+    "emulator": {
+      "type": "android.emulator",
+      "device": {
+        "avdName": "Pixel_2_API_29"
+      }
+    }
+  },
+  "configurations": {
+    "ios": {
+      "binaryPath": "bin/expo-detox.app",
+      "type": "ios.simulator",
+      "name": "iPhone 12 Pro",
+      "build": "expo bi -t simulator"
+    },
+    "android": {
+      "type": "android.emulator",
+      "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+      "name": "Pixel_2_API_29",
+      "device": {
+        "avdName": "Pixel_2_API_29"
+      }
+    }
+  }
+}
